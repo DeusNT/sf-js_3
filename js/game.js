@@ -24,7 +24,8 @@ function endGame() {
   if (totalScore < 1) {
     totalScore = 0;
   }
-  $('#total-score').text(`${totalScore}`)
+  $('#misses').text(`${misses}`);
+  $('#total-score').text(`${totalScore}`);
   $("#win-message").removeClass("d-none");
 }
 
