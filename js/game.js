@@ -42,16 +42,16 @@ function handleClick(event) {
 
 function init() {
   round();
-  $('#button-start').click(function() {
-    $('#button-start').addClass('d-none');
-    $('#button-reload').removeClass('d-none');
-    $('.game').removeClass('d-none');
-    firstHitTime = getTimestamp();
-  });
   $(".game-field").click(handleClick);
   $("#button-reload").click(function() {
     location.reload();
   });
 }
 
-$(document).ready(init);
+$('#button-start').click(function() {
+  $('#button-start').addClass('d-none');
+  $('#button-reload').removeClass('d-none');
+  $('.game').removeClass('d-none');
+  firstHitTime = getTimestamp();
+  init();
+});
